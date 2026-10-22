@@ -1,0 +1,258 @@
+
+/* ESTILOS GENERALES */
+:host {
+  display: block;
+  color: #40372f;
+  font-family: Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+/* ENCABEZADO Y MENÚ */
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 6%;
+  background-color: #40372f;
+  width: 100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+ 
+}
+
+.logo {
+  color: #aaa199;
+  font-family: Georgia, serif;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+  position: sticky;
+  z-index: 1000;
+
+}
+
+.menu a {
+  color: #e8e2de;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+ 
+}
+
+.menu a:hover {
+  color: #a47750;
+}
+
+
+.boton-principal {
+  display: inline-block;
+  padding: 13px 22px;
+  background-color: #796047;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+
+.boton-principal:hover {
+  background-color: #594635;
+}
+
+/* PORTADA PRINCIPAL */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 80px 6%;
+  background-color: #eee5d8;
+}
+
+.hero-texto {
+  flex: 1;
+}
+
+.etiqueta {
+  color: #977653;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  max-width: 550px;
+  margin: 20px 0;
+  color: #40372f;
+  font-family: Georgia, serif;
+  font-size: 48px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.descripcion {
+  max-width: 470px;
+  margin-bottom: 30px;
+  color: #6c6054;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.hero-imagen {
+  flex: 1;
+}
+
+.hero-imagen img {
+  display: block;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* SECCIÓN DE COLECCIÓN */
+.coleccion {
+  padding: 75px 6%;
+  text-align: center;
+  background-color: #fffdf9;
+}
+
+.coleccion h2,
+.nosotros h2 {
+  margin: 15px 0;
+  color: #594635;
+  font-family: Georgia, serif;
+  font-size: 36px;
+  font-weight: normal;
+}
+
+.coleccion-descripcion {
+  margin-bottom: 40px;
+  color: #796d60;
+  line-height: 1.7;
+}
+
+.categorias {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  text-align: left;
+}
+
+.categoria-imagen {
+  overflow: hidden;
+}
+
+.categoria img {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.categoria-imagen:hover img {
+  transform: scale(1.05);
+}
+
+.categoria h3 {
+  margin: 18px 0 8px;
+  color: #594635;
+  font-family: Georgia, serif;
+  font-size: 23px;
+  font-weight: normal;
+}
+
+.categoria p {
+  color: #796d60;
+  line-height: 1.6;
+}
+
+/* SOBRE NOSOTROS */
+.nosotros {
+  padding: 70px 10%;
+  background-color: #e8dfd2;
+  text-align: center;
+}
+
+.nosotros > p:last-child {
+  max-width: 650px;
+  margin: 20px auto 0;
+  color: #65584b;
+  line-height: 1.8;
+}
+
+/* PIE DE PÁGINA */
+footer {
+  padding: 35px 6%;
+  background-color: #40372f;
+  color: #f8f4ed;
+  text-align: center;
+}
+
+footer .logo {
+  color: #f8f4ed;
+}
+
+footer p {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ADAPTACIÓN A MÓVILES */
+@media (max-width: 800px) {
+  .encabezado {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 45px 6%;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero-imagen img {
+    height: 320px;
+  }
+
+  .categorias {
+    grid-template-columns: 1fr;
+  }
+
+  .categoria img {
+    height: 300px;
+  }
+
+  .coleccion h2,
+  .nosotros h2 {
+    font-size: 30px;
+  }
+}
